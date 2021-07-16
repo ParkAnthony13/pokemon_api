@@ -1,6 +1,12 @@
+/////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+//                  THIS IS FOR POKEMON API (NON AXIOS)
+//                      MUST CHANGE COMPONENT IN APP
+//                            IN ORDER TO SEE
+/////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+
 import React, { useState, useEffect } from 'react'
-
-
 
 const Requests = (props) => {
     const [pokeList, setPokeList] = useState(0);
@@ -27,7 +33,7 @@ const Requests = (props) => {
 
     useEffect(() => {
         console.log("start")
-        fetch(`https://pokeapi.co/api/v2/pokemon/?offset=${submitNum}&limit=${submitNum}`)
+        fetch(`https://pokeapi.co/api/v2/pokemon/?offset=0&limit=${submitNum}`)
             .then(response => {
                 return response.json();
             }).then(response => {
